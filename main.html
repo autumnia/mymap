@@ -7,7 +7,38 @@
     </head>
     <body>
         <script>
-            const customers = [];
+            const foods = [ 'apple', 'banana', 'grape', 'peach'];
+            //document.write('foods : ' + foods );
+            const dishes = [ 'apple dish', 'banana dish', 'grape dish', 'peach dish'];
+            //document.write('dishes : ' + dishes );
+
+            function forEach(array, f) {
+                for( var i=0; i<array.length; i++) {
+                    var item = array[i];
+                f(item);
+                }
+            }
+        
+            function tryCatch( successHandler, errorHandler ) {
+                try {
+                    return successHandler();
+                } catch( e ) {
+                    return errorHandler( e )
+                }
+            } 
+
+            function IF( condition, THEN , ELSE ) {
+                if ( condition ) {
+                    return THEN();
+                } else {
+                    return ELSE();
+                }
+            }
+
+            const customers = ['김가을', '홍길동', '전우치', '토르'];
+            document.write( "customers: " + customers + "<br>");
+
+
         </script>
     </body>
 </html>
